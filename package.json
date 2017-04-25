@@ -1,7 +1,7 @@
 {
   "name": "@kazk/codewars-go-runner",
   "description": "Codewars Go runner",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "repository": "kazk/codewars-go-runner",
   "main": "lib/index.js",
   "license": "AGPL-3.0",

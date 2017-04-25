@@ -32,15 +32,18 @@ WORKDIR /runner
 ENV NPM_CONFIG_LOGLEVEL=warn
 COPY package.json /runner/package.json
 RUN npm install --only=prod
+
+COPY lib /runner/lib
+
+COPY docker/frameworks/codewars $GOPATH/src/codewars
+RUN go install codewars/reporter
+
 # TODO: separate test
 RUN npm install --only=dev
-
-COPY . /runner
-
-COPY frameworks/codewars $GOPATH/src/codewars
-RUN go install codewars/reporter
+COPY test /runner/test
 
 USER codewarrior
 ENV USER=codewarrior HOME=/home/codewarrior
+# Use global mocha for now. local one exits after first test for some reason.
 RUN NODE_ENV=test mocha -t 5000
 ENTRYPOINT ["timeout", "17", "node"]
