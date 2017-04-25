@@ -17,11 +17,10 @@ describe('Example Challenges', function() {
 
     it('should have a passing ' + name + ' example', function(done) {
       run({
-        language: 'go',
+        testFramework: 'ginkgo',
         setup: example.setup,
         code: example.answer,
         fixture: example.fixture,
-        testFramework: 'ginkgo'
       }, function(buffer) {
         expect(buffer.stdout).to.not.contain('<FAILED::>');
         expect(buffer.stdout).to.not.contain('<ERROR::>');

@@ -6,7 +6,6 @@ const run = require('../');
 describe('run', function() {
   it('should handle basic code evaluation', function(done) {
     run({
-      language: 'go',
       code: [
         'package main',
         'import "fmt"',

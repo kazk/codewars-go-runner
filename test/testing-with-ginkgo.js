@@ -6,7 +6,7 @@ const run = require('../');
 describe('testing with Ginkgo', function() {
   it('should handle basic code assertion', function(done) {
     run({
-      language: 'go',
+      testFramework: 'ginkgo',
       solution: [
         'package solution',
         '',
@@ -37,7 +37,7 @@ describe('testing with Ginkgo', function() {
 
   it('should handle basic code assertion failure', function(done) {
     run({
-      language: 'go',
+      testFramework: 'ginkgo',
       solution: [
         'package solution',
         '',
@@ -68,7 +68,7 @@ describe('testing with Ginkgo', function() {
 
   it('should handle mixed success and failure', function(done) {
     run({
-      language: 'go',
+      testFramework: 'ginkgo',
       solution: [
         'package solution',
         '',
@@ -108,7 +108,7 @@ describe('testing with Ginkgo', function() {
 
   it('should handle It with mixed result', function(done) {
     run({
-      language: 'go',
+      testFramework: 'ginkgo',
       solution: [
         'package solution',
         '',
@@ -141,7 +141,7 @@ describe('testing with Ginkgo', function() {
 
   it('should handle panic', function(done) {
     run({
-      language: 'go',
+      testFramework: 'ginkgo',
       solution: [
         'package solution',
         '',
@@ -174,7 +174,7 @@ describe('testing with Ginkgo', function() {
 
   it('should handle nested describes', function(done) {
     run({
-      language: 'go',
+      testFramework: 'ginkgo',
       solution: [
         'package solution',
         '',
@@ -235,7 +235,7 @@ describe('testing with Ginkgo', function() {
 
   it('should allow test contexts with same name', function(done) {
     run({
-      language: 'go',
+      testFramework: 'ginkgo',
       solution: [
         'package solution',
         '',
@@ -326,7 +326,7 @@ describe('testing with Ginkgo', function() {
 
   it('should allow arbitrary package name', function(done) {
     run({
-      language: 'go',
+      testFramework: 'ginkgo',
       solution: [
         'package kata',
         '',
@@ -357,7 +357,7 @@ describe('testing with Ginkgo', function() {
 
   it('should allow solution to log', function(done) {
     run({
-      language: 'go',
+      testFramework: 'ginkgo',
       solution: [
         'package solution',
         'import "fmt"',
@@ -393,7 +393,7 @@ describe('testing with Ginkgo', function() {
 
   it('should have formatting commands on independent lines', function(done) {
     run({
-      language: 'go',
+      testFramework: 'ginkgo',
       solution: [
         'package solution',
         'import "fmt"',
@@ -437,7 +437,7 @@ describe('testing with Ginkgo', function() {
 
   it('should support optional setup file', function(done) {
     run({
-      language: 'go',
+      testFramework: 'ginkgo',
       setup: [
         'package solution',
         '',
