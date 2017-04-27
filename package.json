@@ -9,7 +9,7 @@
     "make": "docker build -t cw/go-runner ."
   },
   "dependencies": {
-    "@kazk/codewars-runner": "kazk/codewars-runner"
+    "@kazk/codewars-runner": "kazk/codewars-runner#0.2.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
